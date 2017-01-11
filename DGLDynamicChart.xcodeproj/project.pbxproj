@@ -18,6 +18,7 @@
 		0DDE096E1E1E69870073A6BC /* UICoordinateDataView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DDE09691E1E69870073A6BC /* UICoordinateDataView.m */; };
 		0DDE096F1E1E69870073A6BC /* UICoordinateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DDE096B1E1E69870073A6BC /* UICoordinateView.m */; };
 		0DDE09721E1E69980073A6BC /* UILiveDataGraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DDE09711E1E69980073A6BC /* UILiveDataGraphView.m */; };
+		0DDE098E1E26102A0073A6BC /* DGLGaugeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DDE098D1E26102A0073A6BC /* DGLGaugeView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,8 @@
 		0DDE096B1E1E69870073A6BC /* UICoordinateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICoordinateView.m; sourceTree = "<group>"; };
 		0DDE09701E1E69980073A6BC /* UILiveDataGraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UILiveDataGraphView.h; sourceTree = "<group>"; };
 		0DDE09711E1E69980073A6BC /* UILiveDataGraphView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UILiveDataGraphView.m; sourceTree = "<group>"; };
+		0DDE098C1E26102A0073A6BC /* DGLGaugeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGLGaugeView.h; sourceTree = "<group>"; };
+		0DDE098D1E26102A0073A6BC /* DGLGaugeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DGLGaugeView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +104,8 @@
 				0DDE09631E1E69870073A6BC /* DrawCoordinate */,
 				0DDE09701E1E69980073A6BC /* UILiveDataGraphView.h */,
 				0DDE09711E1E69980073A6BC /* UILiveDataGraphView.m */,
+				0DDE098C1E26102A0073A6BC /* DGLGaugeView.h */,
+				0DDE098D1E26102A0073A6BC /* DGLGaugeView.m */,
 			);
 			path = UILiveView;
 			sourceTree = "<group>";
@@ -197,6 +202,7 @@
 				0DDE096F1E1E69870073A6BC /* UICoordinateView.m in Sources */,
 				0DDE093C1E1E54B10073A6BC /* AppDelegate.m in Sources */,
 				0DDE09391E1E54B10073A6BC /* main.m in Sources */,
+				0DDE098E1E26102A0073A6BC /* DGLGaugeView.m in Sources */,
 				0DDE09721E1E69980073A6BC /* UILiveDataGraphView.m in Sources */,
 				0DDE096E1E1E69870073A6BC /* UICoordinateDataView.m in Sources */,
 				0DDE096D1E1E69870073A6BC /* CoordinateDrawer.m in Sources */,
@@ -356,6 +362,7 @@
 				0DDE094D1E1E54B10073A6BC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -9,17 +9,19 @@
 #import "ViewController.h"
 
 #import "UILiveDataGraphView.h"
+#import "DGLGaugeView.h"
 
 @interface ViewController ()
 
-@property (nonatomic, strong) UIView *contentView;
+@property (nonatomic, strong) UIView                *contentView;
 
-@property (nonatomic, strong) UILiveDataGraphView *graphView;
+@property (nonatomic, strong) UILiveDataGraphView   *graphView;
+@property (nonatomic, strong) DGLGaugeView          *gaugeView;
 
-@property (nonatomic, strong) NSDictionary *dataDic;
+@property (nonatomic, strong) NSDictionary          *dataDic;
 
-@property (nonatomic, strong) NSTimer *dataTimer;
-@property (nonatomic, strong) NSTimer *graphTimer;
+@property (nonatomic, strong) NSTimer               *dataTimer;
+@property (nonatomic, strong) NSTimer               *graphTimer;
 
 @end
 
@@ -28,6 +30,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    
+    [self addGraphView];
+    [self addGaugeView];
+}
+
+- (void)addGraphView {
     
     self.contentView = [[UIView alloc] initWithFrame:CGRectMake(10, 100, 320, 120)];
     [self.view addSubview:self.contentView];
@@ -46,6 +54,15 @@
     
     //定时器刷新图表
     self.graphTimer = [NSTimer scheduledTimerWithTimeInterval:0.2 target:self selector:@selector(freshGraph) userInfo:nil repeats:YES];
+    
+}
+
+- (void)addGaugeView {
+    
+    self.gaugeView = [[DGLGaugeView alloc] initWithFrame:CGRectMake(0, 300, 375, 200)];
+    [self.view addSubview:self.gaugeView];
+    self.gaugeView.minValue = 0;
+    self.gaugeView.maxValue = 100;
 }
 
 - (void)dealloc {
@@ -70,6 +87,7 @@
     NSDictionary *dict = @{@"x" : xStr, @"y" : yStr};
     [dataArr insertObject:dict atIndex:0];
     
+    self.gaugeView.currentValue = y;
 }
 
 - (void)freshGraph {
